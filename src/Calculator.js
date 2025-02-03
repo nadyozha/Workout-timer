@@ -48,7 +48,7 @@ function Calculator({ workouts, allowSound }) {
   return (
     <>
       <form>
-        <div>
+        <div className='row-input'>
           <label>Type of workout</label>
           <select value={number} onChange={(e) => setNumber(+e.target.value)}>
             {workouts.map((workout) => (
@@ -58,7 +58,7 @@ function Calculator({ workouts, allowSound }) {
             ))}
           </select>
         </div>
-        <div>
+        <div className='row-input'>
           <label>How many sets?</label>
           <input
             type='range'
@@ -69,7 +69,7 @@ function Calculator({ workouts, allowSound }) {
           />
           <span>{sets}</span>
         </div>
-        <div>
+        <div className='row-input'>
           <label>How fast are you?</label>
           <input
             type='range'
@@ -81,7 +81,7 @@ function Calculator({ workouts, allowSound }) {
           />
           <span>{speed} sec/exercise</span>
         </div>
-        <div>
+        <div className='row-input'>
           <label>Break length</label>
           <input
             type='range'
